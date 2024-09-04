@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card01({ imageSrc, title, description, originalPrice, discountedPrice, discount, heartIcon }) {
   return (
-    <div className="w-[320px] bg-white_color relative">
+    <div className="w-[310px] bg-white_color relative border-2 border-800-red">
       <img src={imageSrc} alt="card_img" className="w-full h-auto" />
       {/* card like part */}
       <div className="absolute top-2 right-2">

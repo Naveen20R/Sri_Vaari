@@ -17,12 +17,12 @@ const Navbar01 = () => {
   return (
     <div>
       {/* Sidebar for Mobile */}
-      <div className={`fixed top-0 left-0 h-full bg-primary_color transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`} style={{ width: '50%' }}>
+      <div className={`fixed top-0 left-0 h-full bg-primary_color z-10 transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`} style={{ width: '70%' }}>
         <button onClick={closeSidebar} className="text-white absolute top-4 right-4">
           <IoCloseSharp className="w-6 h-6" />
         </button>
         <ul className="flex flex-col items-start p-4 space-y-4">
-          <li><a href="#home" className="text-white hover:text-gray-800">Home</a></li>
+          <li><a href="/" className="text-white hover:text-gray-800">Home</a></li>
           <li><a href="#about" className="text-white hover:text-gray-800">Kurtis</a></li>
           <li><a href="#services" className="text-white hover:text-gray-800">Sarees</a></li>
           <li><a href="#contact" className="text-white hover:text-gray-800">Accessories</a></li>
@@ -35,7 +35,7 @@ const Navbar01 = () => {
         <div className="text-white text-2xl font-bold">Sri Vaari</div>
 
         <div className="hidden md:flex justify-center md:gap-5 flex-grow">
-          <a href="#home" className="leading-[19.2px] font-bold text-white hover:text-black">Home</a>
+          <a href="/" className="leading-[19.2px] font-bold text-white hover:text-black">Home</a>
           <a href="#about" className="leading-[19.2px] font-bold text-white hover:text-black">Kurtis</a>
           <a href="#services" className="leading-[19.2px] font-bold text-white hover:text-black">Sarees</a>
           <a href="#contact" className="leading-[19.2px] font-bold text-white hover:text-black">Accessories</a>
@@ -61,7 +61,7 @@ const Navbar01 = () => {
             <span className='text-white_color leading-[14.4px] text-[12px] font-bold mt-1 group-hover:text-black'>Profile</span>
           </a>
 
-          <a href="#wishlist" className="flex flex-col items-center justify-center hover:text-black group">
+          <a href="/wishList" className="flex flex-col items-center justify-center hover:text-black group">
             <img className='w-[24px] h-[24px]' src="/src/assets/images/icons/heart.svg" alt="wishlist-icon" />
             <span className='text-white_color leading-[14.4px] text-[12px] font-bold ml-1 group-hover:text-black'>Wishlist</span>
           </a>
@@ -72,7 +72,8 @@ const Navbar01 = () => {
         </div>
 
         <button onClick={toggleSidebar} className="text-white bg-blue-600 p-2 rounded-md md:hidden">
-          {isOpen ? <IoCloseSharp className="w-6 h-6" /> : <BsFilterRight className="w-6 h-6" />}
+           <BsFilterRight className="w-6 h-6" />
+          {/* {isOpen && <IoCloseSharp className="w-6 h-6" /> : <BsFilterRight className="w-6 h-6" />} */}
         </button>
       </nav>
     </div>
