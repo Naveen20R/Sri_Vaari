@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { BsFilterRight } from 'react-icons/bs';
 import { IoCloseSharp } from 'react-icons/io5';
 import { FaSearch } from "react-icons/fa";
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 const Navbar01 = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState({more:true,profile:true});
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -12,6 +14,10 @@ const Navbar01 = () => {
 
   const closeSidebar = () => {
     setIsOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    // setDropdownOpen(()=>{x})
   };
 
   return (
@@ -26,7 +32,23 @@ const Navbar01 = () => {
           <li><a href="#about" className="text-white hover:text-gray-800">Kurtis</a></li>
           <li><a href="#services" className="text-white hover:text-gray-800">Sarees</a></li>
           <li><a href="#contact" className="text-white hover:text-gray-800">Accessories</a></li>
-          <li><a href="#contact" className="text-white hover:text-gray-800">More</a></li>
+          <li><div className="relative z-10">
+            <button onClick={toggleDropdown} className="flex items-center text-white font-bold hover:text-black">
+              <span>More</span>
+              {dropdownOpen ? (
+                <IoIosArrowUp className="ml-1" />
+              ) : (
+                <IoIosArrowDown className="ml-1" />
+              )}
+            </button>
+            {dropdownOpen && (
+              <ul className='absolute bg-white w-[150px] mt-2 text-black px-1 py-0 rounded-md shadow-lg'>
+                <li className='my-2 text-[16px] hover:bg-light_blue px-2 py-1 rounded-md'>Option 1</li>
+                <li className='my-2 text-[16px] hover:bg-light_blue px-2 py-1 rounded-md'>Option 2</li>
+                <li className='my-2 text-[16px] hover:bg-light_blue px-2 py-1 rounded-md'>Option 3</li>
+              </ul>
+            )}
+          </div></li>
         </ul>
       </div>
 
@@ -39,7 +61,23 @@ const Navbar01 = () => {
           <a href="#about" className="leading-[19.2px] font-bold text-white hover:text-black">Kurtis</a>
           <a href="#services" className="leading-[19.2px] font-bold text-white hover:text-black">Sarees</a>
           <a href="#contact" className="leading-[19.2px] font-bold text-white hover:text-black">Accessories</a>
-          <a href="#contact" className="leading-[19.2px] font-bold text-white hover:text-black">More</a>
+          <div className="relative z-10">
+            <button onClick={toggleDropdown} className="flex items-center text-white font-bold hover:text-black">
+              <span>More</span>
+              {dropdownOpen ? (
+                <IoIosArrowUp className="ml-1" />
+              ) : (
+                <IoIosArrowDown className="ml-1" />
+              )}
+            </button>
+            {dropdownOpen && (
+              <ul className='absolute bg-white w-[150px] mt-2 text-black px-1 py-0 rounded-md shadow-lg'>
+                <li className='my-2 text-[16px] hover:bg-light_blue px-2 py-1 rounded-md'>Option 1</li>
+                <li className='my-2 text-[16px] hover:bg-light_blue px-2 py-1 rounded-md'>Option 2</li>
+                <li className='my-2 text-[16px] hover:bg-light_blue px-2 py-1 rounded-md'>Option 3</li>
+              </ul>
+            )}
+          </div>
         </div>
 
         <div className="hidden md:flex overflow-hidden px-5 bg-white w-[381px] h-[38px] grid grid-cols-[1fr_auto]  rounded-full items-center">
@@ -72,8 +110,7 @@ const Navbar01 = () => {
         </div>
 
         <button onClick={toggleSidebar} className="text-white bg-blue-600 p-2 rounded-md md:hidden">
-           <BsFilterRight className="w-6 h-6" />
-          {/* {isOpen && <IoCloseSharp className="w-6 h-6" /> : <BsFilterRight className="w-6 h-6" />} */}
+          <BsFilterRight className="w-6 h-6" />
         </button>
       </nav>
     </div>

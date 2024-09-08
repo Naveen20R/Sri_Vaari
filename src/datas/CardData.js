@@ -1,4 +1,3 @@
-// data.js
 export const cardData = [
   {
     id: 1,
@@ -60,8 +59,164 @@ export const cardData = [
     discount: "28% Off",
     heartIcon: "/src/assets/images/icons/heart_black.svg",
   },
-  // Add more card data as needed
 ];
+
+export const cardData_1 = [
+  {
+    id: 1,
+    imageSrc: "/src/assets/images/saree_img/saree_1.svg",
+    title: "Safaa",
+    description: "Organic Cotton Woven",
+    originalPrice: "₹ 3000",
+    discountedPrice: "₹ 2000",
+    discount: "20% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 2,
+    imageSrc: "/src/assets/images/saree_img/saree_2.svg",
+    title: "Kavya",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 3,
+    imageSrc: "/src/assets/images/saree_img/saree_ 3.svg",
+    title: "Kavya",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 4,
+    imageSrc: "/src/assets/images/saree_img/saree_ 4.svg",
+    title: "Kavya",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 5,
+    imageSrc: "/src/assets/images/saree_img/saree_1.svg",
+    title: "test-5",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 6,
+    imageSrc: "/src/assets/images/saree_img/saree_2.svg",
+    title: "test-6",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 7,
+    imageSrc: "/src/assets/images/saree_img/saree_1.svg",
+    title: "Safaa",
+    description: "Organic Cotton Woven",
+    originalPrice: "₹ 3000",
+    discountedPrice: "₹ 2000",
+    discount: "20% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 8,
+    imageSrc: "/src/assets/images/saree_img/saree_2.svg",
+    title: "Kavya",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 9,
+    imageSrc: "/src/assets/images/saree_img/saree_ 3.svg",
+    title: "Kavya",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 10,
+    imageSrc: "/src/assets/images/saree_img/saree_ 4.svg",
+    title: "Kavya",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 11,
+    imageSrc: "/src/assets/images/saree_img/saree_1.svg",
+    title: "test-5",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+  {
+    id: 12,
+    imageSrc: "/src/assets/images/saree_img/saree_2.svg",
+    title: "test-6",
+    description: "Silk Blend",
+    originalPrice: "₹ 3500",
+    discountedPrice: "₹ 2500",
+    discount: "28% Off",
+    heartIcon: "/src/assets/images/icons/heart_black.svg",
+  },
+
+
+];
+
+export const filterData = [
+  {
+    id: 1,
+    label: "Normal Sarees",
+  },
+  {
+    id: 2,
+    label: "Sudi Materials",
+  },
+  {
+    id: 3,
+    label: "Bags",
+  },
+  {
+    id: 4,
+    label: "Earnings",
+  },
+  {
+    id: 5,
+    label: "Craft",
+  },
+  {
+    id: 6,
+    label: "Shirts",
+  }
+  ,
+  {
+    id: 7,
+    label: "pant",
+  }
+]
 
 
 export const wishListData = [

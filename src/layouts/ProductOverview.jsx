@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import RightArrow01 from '/src/assets/images/icons/right_arrow_icon.svg';
 import Tab01 from '/src/components/tab/Tab01';
 
-function ProductOverview() {
+function ProductOverview(props) {
     // State to keep track of the currently selected image
     const [selectedImage, setSelectedImage] = useState('/src/assets/images/saree_img/saree_1.svg');
-
+    
     // Array of image sources for the thumbnails
     const images = [
         '/src/assets/images/saree_img/saree_1.svg',
@@ -14,6 +14,9 @@ function ProductOverview() {
         '/src/assets/images/saree_img/saree_4.svg',
         '/src/assets/images/saree_img/saree_5.svg',
     ];
+
+    console.log('props',props);
+
 
     return (
         <div className="m-4 md:m-6 lg:m-8">
@@ -85,7 +88,7 @@ function ProductOverview() {
                             <img src="/src/assets/images/icons/shopping-bag.svg" alt="Add to Cart" className="w-6 h-6 mr-2" />
                             Add to Cart
                         </button>
-                        <button className='w-full py-2 text-black border-2 border-gray-400 bg-light_gray flex items-center justify-center font-normal text-base md:text-lg'>
+                        <button onClick={()=>{props.AddToCartHandler({price:1000,name:"i Phone 11"})}} className='w-full py-2 text-black border-2 border-gray-400 bg-light_gray flex items-center justify-center font-normal text-base md:text-lg'>
                             <img src="/src/assets/images/icons/heart_black.svg" alt="Add to Wishlist" className="w-6 h-6 mr-2" />
                             Add to WishList
                         </button>

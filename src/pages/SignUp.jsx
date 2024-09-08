@@ -7,15 +7,16 @@ import NumberInput from '/src/components/form/NumberInput';
 import TextareaInput from '/src/components/form/TextareaInput';
 import RadioGroup from '/src/components/form/RadioGroup';
 import DateInput from '/src/components/form/DateInput';
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
+    let navigate = useNavigate()
     const { register, handleSubmit, formState: { errors } } = useForm({
         mode: 'onChange'
     });
 
     const onSubmit = (data) => {
-        console.log(data);
-        alert('Form submitted successfully!');
+        navigate('/login');
         // Handle OTP request here
     };
 
@@ -90,7 +91,7 @@ function SignUp() {
                                     type="submit"
                                     className='w-full py-2 text-white bg-dark_blue flex items-center justify-center font-semibold text-base md:text-lg rounded-md'
                                 >
-                                    Send OTP
+                                    Sign Up
                                 </button>
                             </form>
                         </div>

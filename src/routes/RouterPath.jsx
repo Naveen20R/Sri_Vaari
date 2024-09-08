@@ -7,6 +7,7 @@ const ItemsDetail = lazy(() => import('../pages/ProductDetail'));
 const Login = lazy(() => import('../pages/Login'));
 const Razorpay = lazy(() => import('../pages/Razorpay'));
 const SignUp = lazy(() => import('../pages/SignUp'));
+const FilterProduct = lazy(() => import('../pages/FilterProduct'));
 
 export const appRoutes = [
   {
@@ -38,6 +39,11 @@ export const appRoutes = [
     path: '/SignUp',
     name: 'root',
     element: <SignUp/>,
+  }, 
+  {
+    path: '/:name',
+    name: 'root',
+    element: <FilterProduct/>,
   }, 
 
 ];

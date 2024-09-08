@@ -3,6 +3,7 @@ import Navbar01 from '/src/components/navbar/Navbar01'
 import React from 'react'
 import CardSection01 from '/src/layouts/CardSection01';
 import Footer01 from '/src/components/footer/Footer01';
+import ProductList from 'layouts/ProductList';
 
 function ProductDetail() {
   return (

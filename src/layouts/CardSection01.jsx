@@ -8,7 +8,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function CardSection01({conditions:{bg,title}}) {
-  console.log(bg);
   
   const swiperRef = useRef(null);
   const [isFirstSlide, setIsFirstSlide] = useState(true);
@@ -36,6 +35,11 @@ function CardSection01({conditions:{bg,title}}) {
       setIsLastSlide(swiper.isEnd);
     }
   };
+
+  function getLikedProduct(){
+    console.log('hi');
+    
+  }
 
   return (
     <div className={`${bg ? 'bg-light_blue': ''}  px-8`}>
@@ -76,6 +80,7 @@ function CardSection01({conditions:{bg,title}}) {
                 discountedPrice={card.discountedPrice}
                 discount={card.discount}
                 heartIcon={card.heartIcon}
+                likedProduct={getLikedProduct}
               />
             </SwiperSlide>
           ))}

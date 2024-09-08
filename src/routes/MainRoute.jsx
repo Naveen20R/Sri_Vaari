@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { appRoutes } from './RouterPath.jsx'; // Import the routes configuration
+import { appRoutes } from './RouterPath'; // Import the routes configuration
+import Loading from '/src/pages/Loading'; // Import the loading component
 
 function MainRoute() {
   return (
-    <Routes>
-      {appRoutes.map(({ path, element, name }) => (
-        <Route key={name} path={path} element={element} />
-      ))}
-    </Routes>
+    <Suspense fallback={<Loading />}>
+      <Routes>
+        {appRoutes.map(({ path, element, name }) => (
+          <Route key={name} path={path} element={element} />
+        ))}
+      </Routes>
+    </Suspense>
   );
 }
 
